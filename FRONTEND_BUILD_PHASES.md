@@ -391,15 +391,62 @@
 
 ## Phase Summary
 
-| Phase | What | Deliverables | Docker/Deploy Check |
-|-------|------|-------------|---------------------|
-| 1 | Setup & Docker | Turborepo, Next.js, Tailwind, fake data, Docker | `localhost:3000` serves page with correct fonts |
-| 2 | Layout Shell | Navbar (glass) + MobileNav + Footer + Phone CTA | Nav and footer visible, mobile hamburger works |
-| 3 | Hero Section | Background image hero + CTAs + CMA form (desktop) | Hero displays with animations and form |
-| 4 | Content Sections | Trust bar, About, Services, Listings, Testimonials, CMA | Full homepage scrolls with animations |
-| 5 | Subpages | Listings, About, Contact pages with SEO metadata | All pages navigable from nav |
-| 6 | Polish & QA | Animations, micro-interactions, responsive, a11y | Final full-site walkthrough passes |
-| 7 | Railway Deploy | Dockerized production deploy to Railway | Live at `*.up.railway.app` |
+| Phase | What | Deliverables | Status |
+|-------|------|-------------|--------|
+| 1 | Setup & Docker | Turborepo, Next.js, Tailwind, fake data, Docker | ✅ Complete |
+| 2 | Layout Shell | Navbar (glass) + MobileNav + Footer + Phone CTA | ✅ Complete |
+| 3 | Hero Section | Background image hero + CTAs + CMA form (desktop) | ✅ Complete |
+| 4 | Content Sections | Trust bar, About, Services, Listings, Testimonials, CMA | ✅ Complete |
+| 5 | Subpages | Listings, About, Contact pages with SEO metadata | ✅ Complete |
+| 6 | Polish & QA | Animations, micro-interactions, responsive, a11y | ✅ Complete |
+| 7 | Railway Deploy | Dockerized production deploy to Railway | ⏳ Config ready, needs deploy |
+
+---
+
+## Bonus: Visual Upgrade (Completed)
+
+> Merged to main — clear "wow factor" improvements over original WordPress site.
+
+- [x] Parallax hero with background zoom on scroll
+- [x] Gradient animated "BEST DEAL" text with gold underline animation
+- [x] Floating ambient orbs (teal + gold) in hero
+- [x] Logo image in navbar (transparent → glass transition, color-aware links)
+- [x] Frosted glass CMA form with gradient accent bar
+- [x] Bottom CTA section with parallax interior bg + family photo with tilt
+- [x] Page transition animations (fade-up) on route changes
+- [x] Real images from original site (hero, headshot, listings, logos, favicons)
+- [x] Testimonial section with sold-home background image
+
+## Bonus: SEO & Production Readiness (Completed)
+
+- [x] `sitemap.xml` — auto-generated with all pages
+- [x] `robots.txt` — allows all crawlers, links to sitemap
+- [x] `manifest.json` — PWA-ready with app name, icons, theme color
+- [x] Favicon + Apple Touch Icon in metadata
+- [x] Equal Housing / MLS / Realtor badge in footer
+- [x] `railway.toml` + `railway.json` deployment config
+
+---
+
+## What's Next
+
+### Immediate (to go live)
+- [ ] **Railway deployment** — authenticate CLI (`railway login`) or deploy via dashboard
+  - Root directory: `apps/web`
+  - Builder: Dockerfile
+  - Env var: `PORT=3000`
+- [ ] **Custom domain** — point `justafortrealty.com` DNS to Railway
+- [ ] **SSL certificate** — auto-provisioned by Railway after domain setup
+
+### Future Phases (Backend + Enhancements)
+- [ ] **Backend API** — FastAPI (Python) for form submissions, CRM integration
+- [ ] **Contact/CMA form** — wire to backend endpoint (email notifications)
+- [ ] **Google Maps embed** — real map on Contact page
+- [ ] **Blog/Content section** — SEO-driven property market updates
+- [ ] **MLS integration** — real-time listing data from MLS feed
+- [ ] **Analytics** — Google Analytics 4 or Plausible
+- [ ] **Image optimization** — convert to Next.js `<Image>` components with proper sizing
+- [ ] **Performance audit** — Lighthouse 90+ on all metrics
 
 ---
 
