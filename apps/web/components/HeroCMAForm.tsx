@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Send, CheckCircle } from 'lucide-react'
 
 export default function HeroCMAForm() {
   const [formData, setFormData] = useState({
@@ -19,8 +20,11 @@ export default function HeroCMAForm() {
   }
 
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-soft-xl border border-slate-100">
-      <h2 className="font-heading text-xl font-semibold text-realty-navy text-center">
+    <div className="relative bg-white/95 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/20">
+      {/* Top accent bar */}
+      <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-realty-teal via-realty-gold to-realty-teal rounded-b-full" />
+
+      <h2 className="font-heading text-xl font-semibold text-realty-navy text-center mt-2">
         Get a <span className="text-realty-teal">FREE</span> comparative market analysis!
       </h2>
       <p className="font-body text-sm text-slate-500 text-center mt-2">
@@ -69,14 +73,24 @@ export default function HeroCMAForm() {
         <button
           type="submit"
           disabled={submitted}
-          className="btn-primary w-full text-center disabled:opacity-70 disabled:cursor-not-allowed"
+          className="btn-primary w-full text-center disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
-          {submitted ? 'Sent! We\'ll be in touch.' : 'Get My Analysis'}
+          {submitted ? (
+            <>
+              <CheckCircle size={18} />
+              Sent! We&apos;ll be in touch.
+            </>
+          ) : (
+            <>
+              <Send size={16} />
+              Get My Analysis
+            </>
+          )}
         </button>
       </form>
 
       <p className="font-body text-xs text-slate-400 text-center mt-4">
-        No obligation. Results within 24 hours.
+        No obligation • Results within 24 hours
       </p>
     </div>
   )

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ListingsClient from './ListingsClient'
+import PageTransition from '@/components/PageTransition'
 
 export const metadata: Metadata = {
   title: 'Listings',
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 }
 
 export default function ListingsPage() {
-  return <ListingsClient />
+  return <PageTransition><ListingsClient /></PageTransition>
 }
