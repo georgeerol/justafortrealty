@@ -26,8 +26,8 @@ const config: Config = {
         'realty-warm': '#D4A855',
       },
       fontFamily: {
-        heading: ['Cinzel', 'Georgia', 'serif'],
-        body: ['Josefin Sans', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'Cinzel', 'Georgia', 'serif'],
+        body: ['var(--font-body)', 'Josefin Sans', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         'xl': '12px',

@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import MobileNav from '@/components/MobileNav'
 import MobilePhoneCTA from '@/components/MobilePhoneCTA'
 import Footer from '@/components/Footer'
+import MotionProvider from '@/components/MotionProvider'
 
 const cinzel = Cinzel({
   subsets: ['latin'],
@@ -61,13 +62,21 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cinzel.variable} ${josefinSans.variable}`}>
       <body>
-        <Navbar />
-        <MobileNav />
-        <main className="pt-14 lg:pt-20 pb-14 lg:pb-0">
-          {children}
-        </main>
-        <Footer />
-        <MobilePhoneCTA />
+        <MotionProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-realty-teal focus:text-white focus:rounded-lg focus:font-body focus:font-semibold focus:text-sm"
+          >
+            Skip to content
+          </a>
+          <Navbar />
+          <MobileNav />
+          <main id="main-content" className="pt-14 lg:pt-20 pb-14 lg:pb-0">
+            {children}
+          </main>
+          <Footer />
+          <MobilePhoneCTA />
+        </MotionProvider>
       </body>
     </html>
   )

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,12 +6,14 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    overflow-x: hidden;
   }
 
   body {
     @apply font-body text-slate-800 bg-white antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   @media (max-width: 640px) {
@@ -36,8 +36,13 @@
   }
 
   .btn-primary:active {
-    transform: translateY(0);
+    transform: translateY(0) scale(0.97);
     box-shadow: 0 2px 8px rgba(42,171,179,0.3);
+  }
+
+  .btn-primary:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42,171,179,0.4), 0 4px 12px rgba(42,171,179,0.25);
   }
 
   .btn-secondary {
@@ -49,6 +54,15 @@
     transform: translateY(-1px);
   }
 
+  .btn-secondary:active {
+    transform: translateY(0) scale(0.97);
+  }
+
+  .btn-secondary:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(27,42,74,0.3);
+  }
+
   .btn-gold {
     @apply inline-flex items-center justify-center px-7 py-3.5 rounded-[10px] font-body font-semibold text-white cursor-pointer transition-all duration-250 ease-out;
     background: linear-gradient(135deg, #C9A049 0%, #B8913E 100%);
@@ -58,6 +72,16 @@
   .btn-gold:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(201,160,73,0.35);
+  }
+
+  .btn-gold:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 2px 8px rgba(201,160,73,0.3);
+  }
+
+  .btn-gold:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(201,160,73,0.4), 0 4px 12px rgba(201,160,73,0.25);
   }
 
   .section-heading {
@@ -88,6 +112,11 @@
     box-shadow: 0 0 0 3px rgba(42,171,179,0.15);
   }
 
+  .input:focus-visible {
+    @apply border-realty-teal outline-none;
+    box-shadow: 0 0 0 3px rgba(42,171,179,0.2);
+  }
+
   .input::placeholder {
     @apply text-slate-400;
   }
@@ -101,6 +130,20 @@
   .duration-250 {
     transition-duration: 250ms;
   }
+
+  .focus-ring {
+    @apply outline-none;
+  }
+
+  .focus-ring:focus-visible {
+    box-shadow: 0 0 0 3px rgba(42,171,179,0.3);
+    border-radius: 8px;
+  }
+}
+
+*:focus-visible {
+  outline: 2px solid rgba(42,171,179,0.5);
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {
