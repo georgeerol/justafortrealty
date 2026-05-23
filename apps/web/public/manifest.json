@@ -1,0 +1,21 @@
+{
+  "name": "Justafort Realty",
+  "short_name": "Justafort",
+  "description": "Your Trusted Real Estate Expert in Eastern North Carolina",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1B2A4A",
+  "icons": [
+    {
+      "src": "/favicon/favicon-32x32.jpg",
+      "sizes": "32x32",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/favicon/favicon-192x192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}

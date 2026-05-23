@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     'Benoit Justafort',
     'bilingual realtor',
   ],
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/favicon/favicon-32x32.jpg',
+    apple: '/favicon/apple-touch-icon.jpg',
+  },
   openGraph: {
     title: 'Justafort Realty | Real Estate Agent in Eastern North Carolina',
     description:
