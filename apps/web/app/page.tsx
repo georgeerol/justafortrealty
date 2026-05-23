@@ -5,6 +5,7 @@ import ServicesSection from '@/components/sections/ServicesSection'
 import StatsSection from '@/components/sections/StatsSection'
 import FeaturedListings from '@/components/sections/FeaturedListings'
 import TestimonialsSection from '@/components/sections/TestimonialsSection'
+import BottomCTASection from '@/components/sections/BottomCTASection'
 import CMAFormSection from '@/components/sections/CMAFormSection'
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <StatsSection />
       <FeaturedListings />
       <TestimonialsSection />
+      <BottomCTASection />
       <CMAFormSection />
     </>
   )
