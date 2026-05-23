@@ -1,0 +1,31 @@
+{
+  "name": "justafortrealty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Justafort Realty - Modern real estate website with Next.js",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "docker:start": "docker-compose up -d && echo '\n✅ Services started!\n🌐 Frontend: http://localhost:3000\n'",
+    "docker:stop": "docker-compose down",
+    "docker:restart": "docker-compose restart",
+    "docker:build": "docker-compose up --build -d",
+    "docker:clean": "docker-compose down -v",
+    "docker:logs": "docker-compose logs -f",
+    "docker:logs:web": "docker-compose logs -f web",
+    "docker:status": "docker-compose ps",
+    "web:dev": "cd apps/web && pnpm dev"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "turbo": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}
