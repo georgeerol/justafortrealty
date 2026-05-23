@@ -399,7 +399,7 @@
 | 4 | Content Sections | Trust bar, About, Services, Listings, Testimonials, CMA | ✅ Complete |
 | 5 | Subpages | Listings, About, Contact pages with SEO metadata | ✅ Complete |
 | 6 | Polish & QA | Animations, micro-interactions, responsive, a11y | ✅ Complete |
-| 7 | Railway Deploy | Dockerized production deploy to Railway | ⏳ Config ready, needs deploy |
+| 7 | Railway Deploy | Dockerized production deploy to Railway | ✅ Complete |
 
 ---
 
@@ -431,10 +431,7 @@
 ## What's Next
 
 ### Immediate (to go live)
-- [ ] **Railway deployment** — authenticate CLI (`railway login`) or deploy via dashboard
-  - Root directory: `apps/web`
-  - Builder: Dockerfile
-  - Env var: `PORT=3000`
+- [x] **Railway deployment** — live at https://justafortrealtyweb-production.up.railway.app/
 - [ ] **Custom domain** — point `justafortrealty.com` DNS to Railway
 - [ ] **SSL certificate** — auto-provisioned by Railway after domain setup
 
