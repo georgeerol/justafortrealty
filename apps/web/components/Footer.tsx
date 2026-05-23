@@ -108,6 +108,14 @@ export default function Footer() {
               <p className="font-body text-xs text-slate-400 mt-1">
                 Languages: {agentInfo.languages.join(', ')}
               </p>
+              {/* Equal Housing Badge */}
+              <div className="mt-4">
+                <img
+                  src="/images/equal-housing.png"
+                  alt="Realtor, MLS, Equal Housing Opportunity"
+                  className="h-8 opacity-70"
+                />
+              </div>
             </div>
           </div>
         </div>

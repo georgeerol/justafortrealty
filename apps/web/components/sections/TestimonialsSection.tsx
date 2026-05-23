@@ -25,6 +25,14 @@ export default function TestimonialsSection() {
 
   return (
     <section className="py-20 bg-realty-navy relative overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+          style={{ backgroundImage: 'url(/images/testimonial-bg.jpg)' }}
+        />
+      </div>
+
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />

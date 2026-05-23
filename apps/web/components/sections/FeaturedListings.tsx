@@ -5,6 +5,8 @@ import { Bed, Bath, Ruler, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { listings, formatPrice } from '@/lib/data'
 
+const featuredListings = listings.filter((l) => l.featured)
+
 export default function FeaturedListings() {
   return (
     <section className="py-20 bg-white">
@@ -24,7 +26,7 @@ export default function FeaturedListings() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
-          {listings.map((listing, i) => (
+          {featuredListings.map((listing, i) => (
             <motion.div
               key={listing.id}
               initial={{ opacity: 0, y: 30 }}
