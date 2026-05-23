@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from 'next'
 import { Cinzel, Josefin_Sans } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/Navbar'
+import MobileNav from '@/components/MobileNav'
+import MobilePhoneCTA from '@/components/MobilePhoneCTA'
+import Footer from '@/components/Footer'
 
 const cinzel = Cinzel({
   subsets: ['latin'],
@@ -56,7 +60,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${cinzel.variable} ${josefinSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <MobileNav />
+        <main className="pt-14 lg:pt-20 pb-14 lg:pb-0">
+          {children}
+        </main>
+        <Footer />
+        <MobilePhoneCTA />
+      </body>
     </html>
   )
 }
