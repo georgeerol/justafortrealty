@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   ],
   manifest: '/manifest.json',
   icons: {
-    icon: '/favicon/favicon-32x32.jpg',
-    apple: '/favicon/apple-touch-icon.jpg',
+    icon: '/favicon/favicon-32x32.png',
+    apple: '/favicon/apple-touch-icon.png',
   },
   openGraph: {
     title: 'Justafort Realty | Real Estate Agent in Eastern North Carolina',
