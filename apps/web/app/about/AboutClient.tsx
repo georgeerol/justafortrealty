@@ -27,8 +27,8 @@ export default function AboutClient() {
             <div className="sticky top-28">
               <div className="w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden ring-4 ring-realty-gold/30 ring-offset-4 ring-offset-white shadow-soft-xl">
                 <div
-                  className="w-full h-full bg-cover bg-center bg-slate-200"
-                  style={{ backgroundImage: `url(${agentInfo.photo})`, backgroundColor: '#cbd5e1' }}
+                  className="w-full h-full bg-cover bg-slate-200"
+                  style={{ backgroundImage: `url(${agentInfo.photo})`, backgroundPosition: 'center 15%', backgroundColor: '#cbd5e1' }}
                 />
               </div>
               <div className="mt-6 text-center">
