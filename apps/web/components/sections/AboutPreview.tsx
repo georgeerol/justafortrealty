@@ -21,8 +21,8 @@ export default function AboutPreview() {
             <div className="relative">
               <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden ring-4 ring-realty-gold/40 ring-offset-4 ring-offset-white">
                 <div
-                  className="w-full h-full bg-cover bg-center bg-slate-200"
-                  style={{ backgroundImage: `url(${agentInfo.photo})`, backgroundColor: '#cbd5e1' }}
+                  className="w-full h-full bg-cover bg-slate-200"
+                  style={{ backgroundImage: `url(${agentInfo.photo})`, backgroundPosition: 'center 15%', backgroundColor: '#cbd5e1' }}
                 />
               </div>
               {/* Decorative badge */}

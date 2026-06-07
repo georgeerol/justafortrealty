@@ -33,7 +33,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 cursor-pointer">
           <Image
-            src="/images/logo.jpeg"
+            src="/images/logo.png"
             alt="Justafort Realty"
             width={44}
             height={44}

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, Phone, Mail } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { navLinks, businessInfo } from '@/lib/data'
@@ -19,6 +20,13 @@ export default function MobileNav() {
         <div className="flex items-center justify-between px-4 h-14">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1.5 cursor-pointer" onClick={closeMenu}>
+            <Image
+              src="/images/logo.png"
+              alt="Justafort Realty"
+              width={36}
+              height={36}
+              className="rounded-md"
+            />
             <span className="font-heading text-lg font-bold text-realty-navy">Justafort</span>
             <span className="font-heading text-lg font-light text-realty-gold">Realty</span>
           </Link>
